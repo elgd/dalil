@@ -31,14 +31,24 @@ import javax.swing.JPanel;
 
 
 public  class Grille extends JPanel{
+	private int w = 20;//largeure = nbre de cases
+	private int h = 20;//hauteur = nbre de cases;
+	
+	
+	
 	public void  paintComponent(Graphics g){
 	    //Vous verrez cette phrase chaque fois que la méthode sera invoquée
 		Graphics2D r = (Graphics2D) g;	
 		
-		for (int i=0 ; i<10000 ; i = i+10) // boucle pour afficher une ligne
+		
+		
+		
+		
+		
+		for (int i=0 ; i<(w*10) /*10*nbre de cases*/ ; i = i+10) // boucle pour afficher une ligne
 		{
 			
-			for (int j=0 ; j<1000 ; j=j+10)
+			for (int j=0 ; j<(h*10) /*10*nbre de cases*/ ; j=j+10)
 			{
 				r.drawRect(i,j , 10, 10); // boucle pour afficher une colonne
 			}
@@ -47,4 +57,12 @@ public  class Grille extends JPanel{
 		//System.out.println("la grille se lance"):    
 	  }
 
+	public int GetWeight(){
+		return w;
+	}
+	public int Getheight(){
+		return h;
+	}
+	
+	
 }
